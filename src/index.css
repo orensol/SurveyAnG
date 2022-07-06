@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+* {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  background-color: black;
+  color: white;
+
+}
+
+/* general */
+
+.titleSmall {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 8%;
+  cursor: default
+}
+
+.titleMiddle {
+  color: white;
+  font-size: 2.5rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-weight: bold;
+  cursor: default;
+  
+}
+
+.btn {
+  font-weight: bold;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  opacity: 1;
+  color: black;
+  font-size: 1.5rem;
+  width: 350px;
+  height: 60px;
+  text-transform: uppercase;
+  margin: auto;
+  vertical-align: middle;
+  cursor: pointer;
+  }
+  
+  .btn-back{
+  font-weight: bold;
+  padding-top: 3%;
+  text-transform: uppercase;
+  cursor: pointer;
+  }
+  
+  p {
+  width: 750px;
+  margin: auto;
+  padding-bottom: 2%;
+  font-size: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  }
+
+  .icon {
+    width: 1.6rem;
+    background-color:white;
+    vertical-align: middle;
+  }
+  
+  .icon-white {
+    width: 1.1rem;
+    vertical-align: middle;
+  }
+  
+
+
+/* welcome */
+
+.welcomeTitle {
+  color: white;
+  font-weight: bold;
+  font-size: 3.5rem;
+  padding-top: 8%
+}
+
+.welcomeText {
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  font-size: 1rem;
+}
+
+.btn-welcome {
+  font-weight: bold;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  opacity: 1;
+  color: black;
+  font-size: 1.5rem;
+  width: 350px;
+  height: 60px;
+  text-transform: uppercase;
+  margin: auto;
+  vertical-align: middle;
+  cursor: pointer;
+  }
+
+/* name */
+
+.titleName {
+  color: white;
+  font-size: 1.5rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-weight: bold;
+  cursor: default
+}  
+
+
+/* first question  */
+
+label[for="option1"], label[for="option2"], label[for="option3"]{
+
+margin-bottom: 10px;
+display: inline-block;
+margin-right: 20px;
+padding-left: 25px;
+background: url('./Icons/checked.png') no-repeat; 
+background-position: 0 -35px;
+line-height: 20px;
+cursor: pointer;
+
+}
+
+
+input:checked + label[for="option1"], input:checked + label[for="option2"], input:checked + label[for="option3"]{
+  background-position: 0 0;
+  color:grey;
+  transition:all .3s ease-out;
+}
+
+
+/* second question */
+
+label[for="often"], label[for="rarely"], label[for="never"]{
+
+  margin-bottom: 10px;
+  display: inline-block;
+  padding-left: 32px;
+  background: url('./Icons/whiteCubeChecked.png') no-repeat; 
+  background-position: 0 -150px;
+  line-height: 20px;
+  cursor: pointer;
+  
+  }
+  
+  
+  input:checked + label[for="rarely"], input:checked + label[for="often"], input:checked + label[for="never"]{
+    background-position: 0 0;
+    color:grey;
+    transition:all .3s ease-out;
+  }
+  
+
+
+
+
+
+
+.radio{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5% 0 5% 0;
+  width: 500px;
+  height: 50px;
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+
+.dropDown{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5% 0 5% 0;
+  cursor: pointer
+}
+
+.dropDownText{
+  width: 500px;
+  height: 50px;
+  font-size: 1rem;
+  margin: auto;
+  cursor: pointer
+}
+
+
+.input {
+  display: grid;
+  padding: 5% 0 5% 0;
+  width: 500px;
+  height: 40px;
+  margin: auto;
+}
+
+
+ .inp{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid grey;
+  font-size: 1.5rem;
+  text-align: left;
+  cursor: text;
+ }
+
+
+/* score */
+
+.btn-score {
+font-weight: bold;
+background: #FFFFFF;
+border: 1px solid #707070;
+opacity: 1;
+color: black;
+padding-top: 0%;
+font-size: 1.5rem;
+width: 275px;
+height: 50px;
+line-height: 48px;
+cursor: pointer;
+text-align: center;
+text-transform: uppercase;
+margin: auto;
+vertical-align: middle;
+
+}
+
+.scoreSum {
+  color: white;
+  font-size: 2rem;
+  padding-top: 2%;
+  padding-bottom: 8%;
+  font-weight: bold;
+  animation: titlebox 1s ease ;
+}
+
+@keyframes titlebox {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
