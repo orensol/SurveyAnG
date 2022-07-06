@@ -8,8 +8,6 @@ import ThirdQuestion from './Pages/ThirdQuestion';
 import Score from './Pages/Score';
 
 
-
-
 function App() {
 
   return (

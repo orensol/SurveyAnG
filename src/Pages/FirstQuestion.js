@@ -6,6 +6,23 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import firebase from '../Firebase/config'
 
+
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import { pink } from '@mui/material/colors';
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
+
 export default function FirstQuestion() {
 
     const navigate = useNavigate()
@@ -38,7 +55,30 @@ function editDoc(uptdDoc) {
 
       <div className='titleSmall'> question 1</div>
       <div className='titleMiddle'> How often do you visit this website? </div>
+
+
+    <ThemeProvider theme={darkTheme}>
+
+<FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label"></FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        onChange={(e) => setVisit(e.target.value)}
+      >
+        <FormControlLabel value="often" control={<Radio />} label="Often" />
+        <FormControlLabel value="rarely" control={<Radio />} label="Rarely" />
+        <FormControlLabel value="never" control={<Radio />} label="Never" />
+
+      </RadioGroup>
+    </FormControl>
+</ThemeProvider>
+
 <form >
+
+
+
 
 
 <span className='radio'>
@@ -47,7 +87,7 @@ function editDoc(uptdDoc) {
 type="radio"
 id='often'
 name='visit'
-defaulValue={5}
+defaultValue={5}
 onChange={(e) => setVisit(e.target.value)}
 />
 <label htmlFor="often"> Often </label>
